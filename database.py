@@ -2,14 +2,12 @@ from mongoengine import connect
 
 from models import Regeling, RegelingWaardes
 
-connect('test')
+## Use mock mongo.. can also used real mongo if you want
+# connect('test')
+connect('graphene-mongo-example', host='mongomock://localhost', alias='default')
 
 def init_db():
     # Create the fixtures
-
-    if 1 == 1:
-        return
-
     print("******** inserted data *********")
 
     regelingwaardes = RegelingWaardes(
