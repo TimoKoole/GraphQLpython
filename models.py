@@ -1,9 +1,9 @@
 from datetime import datetime
 from mongoengine import Document, EmbeddedDocument
 from mongoengine.fields import (
-    DateTimeField, EmbeddedDocumentField, GenericEmbeddedDocumentField,
-    ListField, ReferenceField, StringField, IntField,
-    EmbeddedDocumentListField)
+    DateTimeField, EmbeddedDocumentField,
+     StringField, IntField)
+
 
 class RegelingWaardes(EmbeddedDocument):
     franChise = StringField()
@@ -18,7 +18,7 @@ class Regeling(Document):
     meta = {'collection': 'regeling'}
     regelingNummer = IntField()
     regelingNaam = StringField()
-    einddatum = StringField()
-    startDatum = StringField()
+    einddatum = DateTimeField(default=datetime.now)
+    startDatum = DateTimeField(default=datetime.now)
     status = StringField()
     regelingWaardes = EmbeddedDocumentField(RegelingWaardes)

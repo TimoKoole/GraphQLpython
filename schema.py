@@ -18,9 +18,9 @@ class RegelingWaardes(MongoengineObjectType):
         model = RegelingWaardesModel
         interfaces = (Node,)
 
-
 class Query(graphene.ObjectType):
-    # node = Node.Field()
+    node = Node.Field()
     regelingen = MongoengineConnectionField(Regeling)
+
 
 schema = graphene.Schema(query=Query, types=[Regeling, RegelingWaardes])

@@ -1,3 +1,4 @@
+mongoengine
 Flask==0.12.2
 Flask-GraphQL==1.4.1
 graphene-mongo
