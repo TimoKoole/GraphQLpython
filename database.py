@@ -20,7 +20,7 @@ def init_db():
     )
 
     regeling = Regeling(
-        regelingNummer=99,
+        regelingNummer=1,
         regelingNaam='Python generated',
         einddatum='2060-01-01',
         startDatum='2060-01-01',
@@ -29,7 +29,7 @@ def init_db():
     )
 
     regeling2 = Regeling(
-        regelingNummer=99,
+        regelingNummer=2,
         regelingNaam='Python generated numero 2',
         einddatum='2065-01-01',
         startDatum='2065-01-01',
